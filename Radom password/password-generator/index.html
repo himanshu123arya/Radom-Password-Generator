@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Random Password Generator</h1>
+        <div class="generator-card">
+            <div class="password-display">
+                <input type="text" id="password" readonly placeholder="Your password will appear here">
+                <button id="copy-btn" title="Copy to clipboard"><i class="fa fa-copy"></i></button>
+            </div>
+            <div class="options">
+                <label>Password Length: <span id="length-value">12</span></label>
+                <input type="range" id="length" min="6" max="32" value="12">
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="lowercase" checked> Lowercase</label>
+                    <label><input type="checkbox" id="uppercase" checked> Uppercase</label>
+                    <label><input type="checkbox" id="numbers" checked> Numbers</label>
+                    <label><input type="checkbox" id="symbols" checked> Symbols</label>
+                </div>
+            </div>
+            <button id="generate-btn" class="generate-btn">Generate Password</button>
+            <div class="strength">
+                <span>Password Strength:</span>
+                <span id="strength-indicator" class="strength-indicator">-</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
